@@ -10,7 +10,7 @@ This GitHub organization contains the following repositories:
   Early Solidity prototypes and experimental contract logic.
 
 - [`forever-library-contract`](https://github.com/foreverlibrary/forever-library-smart-contract)  
-  Final deployed contract. Fully immutable, open minting, and permanently locked metadata (after 24 hour editing window).
+  Final deployment of the original Forever Library ERC-721 shared minting contract. Fully immutable, open minting, and permanently locked metadata (after 24 hour editing window).
 
 ### 🖥 Frontend Repositories
 
