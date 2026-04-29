@@ -19,7 +19,7 @@ This GitHub organization contains the following repositories:
 - [`forever-library-frontend-draft`](https://github.com/foreverlibrary/forever-library-frontend-draft)  
   Pre-production front end prototype and design concept.
 
-- [`forever-library-frontend`](https://github.com/foreverlibrary/forever-library-frontend)  
+- [`forever-library-frontend`](https://github.com/foreverlibrary/forever-library-frontend) (Private Repo) 
   Production-ready interface for minting and viewing artifacts on the protocol.
 
 ---
