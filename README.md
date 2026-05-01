@@ -12,7 +12,7 @@ This GitHub organization contains the following repositories:
 - [`forever-library-contract`](https://github.com/foreverlibrary/forever-library-smart-contract)  
   Final deployment of the original Forever Library ERC-721 shared minting contract. Fully immutable, open minting, and permanently locked metadata (after 24 hour editing window).
 
-- You can find the source code for the latest Forever Library ERC-1155 shared minting contracts on Ethereum mainnet (0xd574ab9774955a582571910c70c4b0dad228f1af) and Base layer 2 (0x736b65e1858d981342d9998a24a2974e29f9508e) on this repository.
+- You can find the source code for the latest Forever Library ERC-1155 shared minting contracts on Ethereum mainnet (0xd574ab9774955a582571910c70c4b0dad228f1af), Base (0x736b65e1858d981342d9998a24a2974e29f9508e), and MegaETH (0x230da0d2e34ef4a5f7c0a842b3cd9bdd6c0b0f2f) on this repository.
 
 ### 🖥 Frontend Repositories
 
