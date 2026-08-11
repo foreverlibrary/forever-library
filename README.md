@@ -38,6 +38,7 @@ A separate Forever Library FA2 contract lives on Tezos at `KT1Tsqqffsf5H5KAWFasA
 | Path | Contents |
 | --- | --- |
 | [`INTEGRATION.md`](INTEGRATION.md) | Developer integration guide |
+| [`SECURITY.md`](SECURITY.md) | Vulnerability reporting and audit status |
 | [`contracts/v3/`](contracts/v3/) | V3 source — canonical, Shape variant, per-chain flattened deployed sources, sha256 checksums |
 | [`abi/`](abi/) | ABIs: canonical, Shape variant, `IExternalRenderer` |
 | [`legacy/`](legacy/) | Previous-generation contract sources |
