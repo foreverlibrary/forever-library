@@ -1,0 +1,9 @@
+# sha256 of each chain's deployed (flattened) source.
+# Verify: shasum -a 256 -c DEPLOY_CHECKSUMS.txt  (run from the repo root)
+b33b411a87ac39da347e00161c624571b64cd122fdef1acaaaa33790d8501066  contracts/v3/flattened/ethereum/ForeverLibraryV3_flat.sol
+706fc348f897b14b6008431a21020a9fc2929c25a3730992967b8cb884647875  contracts/v3/flattened/base/ForeverLibraryV3_flat.sol
+e935c94e36a060982c160cfd2c1f9f7f428a5d89e1d7d9576fc14818b2017002  contracts/v3/flattened/arbitrum/ForeverLibraryV3_flat.sol
+945f39c761d0da08fe38c4671ae2422624947676b7eafade06d6cd35a37e2f2b  contracts/v3/flattened/soneium/ForeverLibraryV3_flat.sol
+0ee04f9c8bb9f06046de566ee9a13fe0cc3a46c87483b8bdc4bb0ea986bc5939  contracts/v3/flattened/shape/ForeverLibraryV3_flat.sol
+e287042a0e71ca8065b296914eb0de47da139f2cc677a62323bacd6c28035683  contracts/v3/flattened/megaeth/ForeverLibraryV3_flat.sol
+2ded5164bcd2e031e58eacc435e2a8dc817a12d8cb7fed430156f06d8520ded8  contracts/v3/flattened/robinhood/ForeverLibraryV3_flat.sol

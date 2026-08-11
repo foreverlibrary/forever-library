@@ -1,0 +1,3 @@
+# Foundry build artifacts (from the ABI-regeneration instructions in INTEGRATION.md)
+out/
+cache/
