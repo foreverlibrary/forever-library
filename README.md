@@ -6,6 +6,7 @@ Forever Library is an open-source protocol for building provenance of digital me
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.28-363636.svg)](contracts/v3/ForeverLibraryV3.sol)
+[![verify](https://github.com/foreverlibrary/forever-library/actions/workflows/verify.yml/badge.svg)](https://github.com/foreverlibrary/forever-library/actions/workflows/verify.yml)
 
 ---
 

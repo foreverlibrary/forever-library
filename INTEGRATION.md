@@ -26,6 +26,26 @@ Forever Library V3 is a single immutable ERC-1155 contract, deployed once per ch
 
 Every deployed source can also be checked against this repository: [`contracts/v3/DEPLOY_CHECKSUMS.txt`](contracts/v3/DEPLOY_CHECKSUMS.txt) holds the sha256 of each chain's flattened source, and the flattened files themselves are in [`contracts/v3/flattened/`](contracts/v3/flattened/).
 
+**Runtime bytecode hashes** — the deepest check, needing nothing but an RPC node. Each value is `keccak256` of the contract's on-chain runtime bytecode (fetched 2026-08-11; immutable, so it can never change):
+
+```bash
+cast keccak $(cast code <address> --rpc-url <rpc>)
+```
+
+| Network | Runtime bytecode keccak256 | Size |
+| --- | --- | --- |
+| Ethereum | `0xee0698e41be54c5de68b8a04e686ad10dbe580922ffa5895054951da13b5a22d` | 20,300 B |
+| Base | `0x3b9c46ee619570bdae29defd7feae9306c34e784e9e763729f54a117e4febffa` | 20,300 B |
+| Arbitrum One | `0x8fac8c4fa403245fe613798010416a1b3590c7e44e30563e9e1fff0f5484c419` | 20,300 B |
+| Soneium | `0xbb9c4ee1f8b63e633805716aa6b07ae157b1bbcb98015f9787d26b776da18b80` | 20,300 B |
+| Shape | `0x3358c6a46f58b929129aa8abb24d1632f85480d326836b6487e7c55e6cf5f3d9` | 20,340 B |
+| MegaETH | `0xe0df389e8de2bd0476e5e672be66832f15ac63f4889933bac6751adc682c1bd7` | 20,300 B |
+| Robinhood Chain | `0x408654fb3d90469da83f36a643592175b393656d436e9cfcb0552d5c7249a9dc` | 20,300 B |
+| Sepolia | `0xbedc39f8f30e0daa76878ee0e063ffdea3a634be72e40a6c984f82128ac1c1a1` | 20,300 B |
+| Base Sepolia | `0x4502adc286f398c58341d2650c0b8edcffb99cfebcc6dae794c3b0aa3acb0c57` | 20,300 B |
+
+The hashes differ across chains despite identical logic because solc's metadata trailer (the last bytes of runtime code) commits to each chain's source file, which differs by the branding constant. Shape is 40 bytes larger — it's the gasback variant.
+
 Notes you need before you write code against these:
 
 - **`0x230da0D2E34Ef4a5F7c0A842b3cd9BDd6C0B0F2F` exists on four chains and is not the same contract on all of them.** On Arbitrum, Shape, and Robinhood it is Forever Library V3 (same deployer wallet, same nonce on each chain). On **MegaETH the identical address is a previous-generation Forever Library ERC-1155** — different code, different ABI. V3 on MegaETH is `0xC41D…3392`. Always pin the chain ID alongside the address.
