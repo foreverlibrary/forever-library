@@ -1,6 +1,7 @@
 # Verifies, on every push and PR, that this repository's claims hold:
 #   1. the flattened deployed sources match their published sha256 checksums
 #   2. the checked-in ABIs are exactly reproducible from those sources
+#   3. the full Foundry test suites pass (canonical + Shape variant)
 name: verify
 
 on:
@@ -23,22 +24,38 @@ jobs:
 
       - name: Rebuild canonical ABI from the deployed source
         run: |
-          forge build --contracts contracts/v3/flattened/ethereum --out out-eth
-          python3 - <<'EOF'
+          FOUNDRY_PROFILE=flattened forge build --contracts contracts/v3/flattened/ethereum --out out-eth
+          python3 - <<'PY'
           import json
           rebuilt = json.load(open('out-eth/ForeverLibraryV3_flat.sol/ForeverLibraryV3.json'))['abi']
           shipped = json.load(open('abi/ForeverLibraryV3.json'))
           assert rebuilt == shipped, 'abi/ForeverLibraryV3.json does not match a rebuild from source'
           print(f'canonical ABI reproducible ({len(shipped)} entries)')
-          EOF
+          PY
 
       - name: Rebuild Shape ABI from the deployed source
         run: |
-          forge build --contracts contracts/v3/flattened/shape --out out-shape
-          python3 - <<'EOF'
+          FOUNDRY_PROFILE=flattened forge build --contracts contracts/v3/flattened/shape --out out-shape
+          python3 - <<'PY'
           import json
           rebuilt = json.load(open('out-shape/ForeverLibraryV3_flat.sol/ForeverLibraryV3.json'))['abi']
           shipped = json.load(open('abi/ForeverLibraryV3.shape.json'))
           assert rebuilt == shipped, 'abi/ForeverLibraryV3.shape.json does not match a rebuild from source'
           print(f'shape ABI reproducible ({len(shipped)} entries)')
-          EOF
+          PY
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+
+      - name: Canonical suite
+        run: forge test
+
+      - name: Shape variant suite
+        run: forge test --root contracts/v3/shape

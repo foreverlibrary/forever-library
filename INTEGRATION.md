@@ -88,11 +88,26 @@ To regenerate from source instead of trusting the checked-in copy:
 ```bash
 git clone https://github.com/foreverlibrary/forever-library.git
 cd forever-library
-forge build --contracts contracts/v3/flattened/ethereum
-# ABI: out/ForeverLibraryV3_flat.sol/ForeverLibraryV3.json → .abi
+FOUNDRY_PROFILE=flattened forge build --contracts contracts/v3/flattened/ethereum
+# ABI: out-flat/ForeverLibraryV3_flat.sol/ForeverLibraryV3.json → .abi
+# (swap ethereum for shape to rebuild the Shape variant's)
 ```
 
-Or pull it from any explorer where the contract is verified (§2).
+Or pull it from any explorer where the contract is verified (§2). CI re-runs this rebuild on every push and fails on any drift between `abi/` and the sources.
+
+### Test suite
+
+The full Foundry test suites ship in this repository — [`contracts/v3/test/`](contracts/v3/test/) for the canonical contract and [`contracts/v3/shape/test/`](contracts/v3/shape/test/) for the Shape variant; 117 tests each, covering minting, shard mutation windows, slice/rolling-hash integrity, lock guards, delegation, soulbound transfer blocking, multicall atomicity, ownership/gasback seats, and the renderer probe surface. CI runs both on every push.
+
+```bash
+git clone --recurse-submodules https://github.com/foreverlibrary/forever-library.git
+cd forever-library
+forge test                              # canonical suite
+forge test --root contracts/v3/shape    # Shape variant suite
+FL_GAS=true forge test --match-path '*GasMeasurement*' -vv   # opt-in gas studies
+```
+
+The three `GasMeasurement` studies are env-gated (`FL_GAS=true`) and skipped by default — they print the measured read/write gas curves behind the tier ceilings in §6.2.
 
 For TypeScript with [viem](https://viem.sh), copy the ABI into a `.ts` file `as const` to get full type inference on function names and args:
 
@@ -759,6 +774,7 @@ Nothing above needs us. The events, the deploy blocks, the ABIs, and the tier-3 
 | --- | --- |
 | Canonical V3 source (all chains except Shape) | [`contracts/v3/ForeverLibraryV3.sol`](contracts/v3/ForeverLibraryV3.sol) |
 | Shape variant source | [`contracts/v3/shape/ForeverLibraryV3.sol`](contracts/v3/shape/ForeverLibraryV3.sol) |
+| Foundry test suites (canonical / Shape) | [`contracts/v3/test/`](contracts/v3/test/) / [`contracts/v3/shape/test/`](contracts/v3/shape/test/) |
 | Per-chain deployed (flattened) sources | [`contracts/v3/flattened/`](contracts/v3/flattened/) |
 | sha256 checksums of the deployed sources | [`contracts/v3/DEPLOY_CHECKSUMS.txt`](contracts/v3/DEPLOY_CHECKSUMS.txt) |
 | ABIs (canonical, Shape, renderer interface) | [`abi/`](abi/) |

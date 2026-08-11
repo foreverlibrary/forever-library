@@ -9,7 +9,7 @@ Email **deployer@foreverlibrary.xyz**. Please report privately before opening a 
 Stated plainly, so you can weigh it yourself:
 
 - The V3 contracts have been through **extensive AI-assisted security review**: repeated full-codebase audits using multiple frontier models (including Anthropic Claude, OpenAI ChatGPT, and Moonshot Kimi K3), run as independent fresh-context passes across successive revisions of the source, with findings remediated and re-reviewed. The Shape gasback variant received its own dedicated review of the divergence.
-- Every deployment carries a **full Foundry test suite** (120 tests per chain repo) covering minting, shard mutation windows, slice/rolling-hash integrity, locking guards, delegation, soulbound transfer blocking, multicall atomicity, and the renderer probe surface.
+- Every deployment carries a **full Foundry test suite**, published in this repository ([`contracts/v3/test/`](contracts/v3/test/) canonical, [`contracts/v3/shape/test/`](contracts/v3/shape/test/) Shape variant — 117 tests each, plus opt-in gas studies) covering minting, shard mutation windows, slice/rolling-hash integrity, locking guards, delegation, soulbound transfer blocking, multicall atomicity, and the renderer probe surface. CI runs both suites on every push.
 - The contracts have **not been audited by an external professional security firm.**
 
 ## What the design removes from the attack surface
