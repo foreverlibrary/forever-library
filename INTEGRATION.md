@@ -18,7 +18,7 @@ Forever Library V3 is a single immutable ERC-1155 contract, deployed once per ch
 | Base | 8453 | [`0xBe186b03A9397daeEBee393946D65c1D114C81b9`](https://basescan.org/address/0xBe186b03A9397daeEBee393946D65c1D114C81b9#code) | 48886862 | Basescan |
 | Arbitrum One | 42161 | [`0x230da0D2E34Ef4a5F7c0A842b3cd9BDd6C0B0F2F`](https://arbiscan.io/address/0x230da0D2E34Ef4a5F7c0A842b3cd9BDd6C0B0F2F#code) | 485922302 | Sourcify (exact match) |
 | Soneium | 1868 | [`0x01E843E56c764e9a21cA5db6F10361B6eDab3DE5`](https://soneium.blockscout.com/address/0x01E843E56c764e9a21cA5db6F10361B6eDab3DE5?tab=contract) | 25717391 | Blockscout |
-| Shape | 360 | [`0x230da0D2E34Ef4a5F7c0A842b3cd9BDd6C0B0F2F`](https://shapescan.xyz/address/0x230da0D2E34Ef4a5F7c0A842b3cd9BDd6C0B0F2F) | 31414171 | **not yet** — source in [`contracts/v3/flattened/shape/`](contracts/v3/flattened/shape/) |
+| Shape | 360 | [`0x230da0D2E34Ef4a5F7c0A842b3cd9BDd6C0B0F2F`](https://shapescan.xyz/address/0x230da0D2E34Ef4a5F7c0A842b3cd9BDd6C0B0F2F?tab=contract) | 31414171 | Blockscout (full match) |
 | MegaETH | 4326 | [`0xC41D915178DC27151511F7044541aCa93Ec73392`](https://mega.etherscan.io/address/0xC41D915178DC27151511F7044541aCa93Ec73392#code) | 21770463 | Etherscan (MegaETH) |
 | Robinhood Chain | 4663 | [`0x230da0D2E34Ef4a5F7c0A842b3cd9BDd6C0B0F2F`](https://robinhoodchain.blockscout.com/address/0x230da0D2E34Ef4a5F7c0A842b3cd9BDd6C0B0F2F?tab=contract) | 14937202 | Blockscout |
 | Sepolia (testnet) | 11155111 | [`0xd0478Da800Ed1A7cC1127A19858211d399BdEa90`](https://sepolia.etherscan.io/address/0xd0478Da800Ed1A7cC1127A19858211d399BdEa90#code) | 11247557 | Etherscan |
