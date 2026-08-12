@@ -2,13 +2,22 @@
 pragma solidity 0.8.28;
 
 // ============================================================================
-// ForeverLibraryV3 — final pre-deployment source.
-// Full Foundry test suite (test/); guard-order audit + an independent cold
-// review both passed with no critical/high findings. NOT professionally
-// audited, NOT yet deployed. Design decisions were reviewed and resolved:
-// the original five carry `RESOLVED:` comments at their sites; later
-// decisions (6 name/symbol, 7 no-batch-mint, 8 renderer shards) are
-// recorded in CLAUDE.md.
+// ForeverLibraryV3 — the deployed 3.0.0 source (readable copy).
+// Live on Ethereum, Base, Arbitrum One, Soneium, MegaETH and Robinhood
+// Chain (Shape runs a sanctioned gasback variant: contracts/v3/shape/).
+// Addresses and verification: INTEGRATION.md §2. Full Foundry test suite:
+// test/ (run by CI). Review history and audit status: SECURITY.md — not
+// audited by an external professional firm. Design decisions were reviewed
+// and resolved: the original five carry `RESOLVED:` comments at their
+// sites; later decisions are documented at their sites throughout.
+//
+// NOTE on the explorer-verified source: the byte-exact deployed sources
+// live in contracts/v3/flattened/ (sha256-pinned; never edited). Their
+// comment header predates deployment ("final pre-deployment source ...
+// NOT yet deployed") and is frozen forever — verification requires the
+// source to hash-match the metadata sealed into the on-chain bytecode, so
+// that text can never be corrected on the explorers. Comments compile to
+// nothing; only this readable copy can carry the current header.
 //
 // V3 unifies the V1 minting contract and the external shard renderer into a
 // single contract, porting the architecture proven by Forever Library Tezos

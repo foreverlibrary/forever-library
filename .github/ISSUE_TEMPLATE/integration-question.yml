@@ -1,0 +1,23 @@
+name: Integration question
+description: You're building against the contracts and something in the guide is unclear or missing.
+labels: [question]
+body:
+  - type: input
+    id: section
+    attributes:
+      label: Guide section
+      description: Which part of INTEGRATION.md is unclear or doesn't cover your case? (e.g. §4.2 formats[], §6.3 events)
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: What are you trying to do?
+      description: What you're building, what you tried, and where the guide left you stuck.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Code or transaction context
+      description: Optional — relevant snippets, simulated call args, or transaction hashes.

@@ -1,0 +1,51 @@
+name: Bug report
+description: Something behaves differently than the contracts or the integration guide say it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Security vulnerabilities do not belong here** — see [SECURITY.md](https://github.com/foreverlibrary/forever-library/blob/main/SECURITY.md) for private disclosure.
+  - type: dropdown
+    id: chain
+    attributes:
+      label: Chain
+      options:
+        - Ethereum (1)
+        - Base (8453)
+        - Arbitrum One (42161)
+        - Soneium (1868)
+        - Shape (360)
+        - MegaETH (4326)
+        - Robinhood Chain (4663)
+        - Sepolia (11155111)
+        - Base Sepolia (84532)
+        - Not chain-specific (docs / ABI / tooling)
+    validations:
+      required: true
+  - type: input
+    id: surface
+    attributes:
+      label: Function, event, or doc section
+      description: e.g. `appendSlice`, `TokenMinted`, INTEGRATION.md §5.6
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What the contract source or INTEGRATION.md led you to expect.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead — include revert names, transaction hashes, or token ids where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Minimal steps or code (viem/cast/forge) that reproduces it.

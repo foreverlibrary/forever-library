@@ -40,6 +40,7 @@ A separate Forever Library FA2 contract lives on Tezos at `KT1Tsqqffsf5H5KAWFasA
 | --- | --- |
 | [`INTEGRATION.md`](INTEGRATION.md) | Developer integration guide |
 | [`SECURITY.md`](SECURITY.md) | Vulnerability reporting and audit status |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) · [`CHANGELOG.md`](CHANGELOG.md) | How to contribute; repository history |
 | [`contracts/v3/`](contracts/v3/) | V3 source — canonical, Shape variant, per-chain flattened deployed sources, sha256 checksums |
 | [`contracts/v3/test/`](contracts/v3/test/) | Full Foundry test suites (canonical + [Shape variant](contracts/v3/shape/test/)), run by CI on every push |
 | [`abi/`](abi/) | ABIs: canonical, Shape variant, `IExternalRenderer` |
