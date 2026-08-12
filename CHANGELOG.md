@@ -6,6 +6,7 @@ Notable changes to this repository. The deployed contracts are immutable — thi
 
 ### Added
 - Full Foundry test suites, published from the per-chain contract repos: [`contracts/v3/test/`](contracts/v3/test/) (canonical, 117 tests) and [`contracts/v3/shape/test/`](contracts/v3/shape/test/) (Shape variant, 117 tests), plus opt-in gas studies (`FL_GAS=true`). CI runs both on every push.
+- Stateful invariant suite ([`contracts/v3/test/invariant/`](contracts/v3/test/invariant/)): 8 invariants over fuzzed operation sequences — lock finality, provenance immutability, exact revision accounting, metadata-hash replay, supply conservation, soulbound immobility, royalty bounds — with expected-revert probes and `fail_on_revert` differential spec checking.
 - `forge-std` v1.11.0 and `openzeppelin-contracts` v5.1.0 as pinned git submodules.
 - `CHANGELOG.md`, issue templates, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`.
 - Accurate deployed-status headers on the readable contract sources, including a note about the pre-deployment header frozen into the explorer-verified sources.

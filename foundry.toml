@@ -17,3 +17,11 @@ evm_version = "cancun"
 src = "contracts/v3/flattened"
 skip = []
 out = "out-flat"
+
+# Stateful invariant campaigns (contracts/v3/test/invariant/). The handler
+# re-states the contract's rules as preconditions, so fail_on_revert=true
+# turns ANY unexpected revert into a failure — a differential spec check.
+[invariant]
+runs = 32
+depth = 48
+fail_on_revert = true

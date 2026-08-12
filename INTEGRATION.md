@@ -109,6 +109,8 @@ FL_GAS=true forge test --match-path '*GasMeasurement*' -vv   # opt-in gas studie
 
 The three `GasMeasurement` studies are env-gated (`FL_GAS=true`) and skipped by default — they print the measured read/write gas curves behind the tier ceilings in §6.2.
 
+The canonical suite also includes **stateful invariant campaigns** ([`contracts/v3/test/invariant/`](contracts/v3/test/invariant/)): a fuzzed handler drives random sequences of mints, edits, slices, selections, locks, delegation changes, transfers, and time warps, and after every step asserts the contract's core promises — lock finality freezes all shard state, provenance is never rewritten, `revisionOf` counts mutations exactly, every `metadataHash` replays from independently-read chunk code, supply is conserved, soulbound tokens never move, and forbidden operations revert with exactly the documented errors. The campaigns run with `fail_on_revert = true`: the handler re-states the contract's authorization/window/lock rules as preconditions, so any disagreement between that spec and the contract fails the run in either direction.
+
 For TypeScript with [viem](https://viem.sh), copy the ABI into a `.ts` file `as const` to get full type inference on function names and args:
 
 ```ts
