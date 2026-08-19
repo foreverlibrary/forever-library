@@ -44,8 +44,7 @@ roundel re-keys to the active chain's accent.
 
 Chain-branded variants (the same mark with the roundel re-keyed to the
 chain's accent) already live in this repository at
-[`assets/chain-marks/v3/`](../assets/chain-marks/v3/). Use these only
-where the chain context is explicit.
+[`assets/chain-marks/v3/`](../assets/chain-marks/v3/).
 
 PNG exports sit next to each SVG (`-1024`, `-256`, plus a `-64` favicon
 size for the default mark). Use the SVG whenever the medium allows.
