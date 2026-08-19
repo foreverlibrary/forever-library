@@ -37,10 +37,13 @@ roundel re-keys to the active chain's accent.
 | file | use |
 |---|---|
 | `logo/fl-mark.svg` | default: blue roundel, white glyph |
+| `logo/fl-mark-gradient.png` | black glyph on the warm gradient field (PNG, 1024px) |
 | `logo/fl-mark-ink.svg` | monochrome contexts, light backgrounds |
 | `logo/fl-mark-paper.svg` | monochrome contexts, dark backgrounds |
 | `logo/fl-glyph-black.svg` | glyph only, black on transparent |
 | `logo/fl-glyph-white.svg` | glyph only, white on transparent |
+
+<img src="logo/fl-mark-gradient.png" alt="Forever Library gradient mark" width="160">
 
 Chain-branded variants (the same mark with the roundel re-keyed to the
 chain's accent) already live in this repository at
@@ -48,6 +51,19 @@ chain's accent) already live in this repository at
 
 PNG exports sit next to each SVG (`-1024`, `-256`, plus a `-64` favicon
 size for the default mark). Use the SVG whenever the medium allows.
+
+## Banners
+
+The official banner artwork: the FL glyph at the center of a dark vortex
+of text, 1920×1080 PNG. Use these for social headers, event graphics,
+and press placements.
+
+![Forever Library banner](banners/FL_Banner_Comp.png)
+
+| file | use |
+|---|---|
+| `banners/FL_Banner.png` | full-quality master (4.6 MB) |
+| `banners/FL_Banner_Comp.png` | compressed copy for web use (365 KB) |
 
 ## Color
 
