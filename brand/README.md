@@ -8,29 +8,25 @@ Questions or requests for other formats: open an issue on this repo.
 
 ## Name
 
-The name is **Forever Library**, two words, both capitalized. Not
-"ForeverLibrary" (that spelling is reserved for contract and code
-identifiers like `ForeverLibraryV3`), not "the Forever Library" in
-headlines. The protocol's deployed contract family is referred to as
-ForeverLibraryV3 or "the V3 contracts" when the technical distinction
+**Forever Library**, two words, both capitalized. Not
+"ForeverLibrary", not "the Forever Library" in
+headlines. The protocol's current deployed contract family is referred to as
+Forever Library V3 or "the V3 contracts" when the technical distinction
 matters.
 
 ## Boilerplate
 
 Short (one line):
 
-> Forever Library is an open-source protocol for building provenance of
-> digital media via immutable Ethereum NFTs.
+> A minting place you can rely on.
 
 Long (one paragraph):
 
-> Forever Library is a series of immutable smart contracts, live on
-> Ethereum and several L2s, preserving digital culture through open,
-> verifiable, and permanent minting. The contracts are admin-less and
-> non-payable; records carry explicit rights, format identification, and
-> onchain proofs, with fallback storage across IPFS, Arweave, and the
-> chain itself. Anyone can mint through the Forever Library app or
-> directly from the contracts.
+> The Forever Library Protocol is a series of immutable smart contracts,
+> live on Ethereum, Tezos, and other leading EVM layer 2 chains, designed
+> to preserve digital culture through open, verifiable, and permanent
+> minting. No matter your background or creative discipline, it’s a public
+> record for onchain creativity accessible to all.
 
 ## Logo
 
@@ -53,15 +49,6 @@ where the chain context is explicit.
 
 PNG exports sit next to each SVG (`-1024`, `-256`, plus a `-64` favicon
 size for the default mark). Use the SVG whenever the medium allows.
-
-Rules:
-
-- Do not redraw, stretch, rotate, or recolor the mark. The blue is the
-  brand color, not a suggestion, except where a chain-branded context
-  re-keys it (see Color below).
-- Keep clear space around the roundel of at least a quarter of its
-  diameter.
-- The mark is always circular; do not crop it into another shape.
 
 ## Color
 
@@ -94,17 +81,6 @@ Shape `#17171A`, MegaETH `#111113`, Robinhood `#CCFF00`.
 
 All three are open-licensed and self-hosted in the app via Fontsource.
 Fallbacks: system-ui sans, Georgia serif, ui-monospace.
-
-## Voice and copy style
-
-- Plain language. Provenance-and-agency framing: the story is that
-  creators keep control of their record, not that a platform grants it.
-- The words "free" and "lock" do not appear in marketing surfaces.
-  Locking is a quiet Studio capability, described with plain verbs like
-  "finalize."
-- No em dashes. Use a period, colon, comma, or the · separator.
-- Never rewrite artist-supplied text. Descriptions and token metadata
-  are the artist's words, punctuation included.
 
 ## License
 
