@@ -46,6 +46,7 @@ A separate Forever Library FA2 contract lives on Tezos at `KT1Tsqqffsf5H5KAWFasA
 | [`abi/`](abi/) | ABIs: canonical, Shape variant, `IExternalRenderer` |
 | [`legacy/`](legacy/) | Previous-generation contract sources |
 | [`assets/chain-marks/`](assets/chain-marks/) | Per-chain collection marks (SVG) |
+| [`brand/`](brand/) | Brand and media kit: logo lockups, color, typography, voice |
 
 ---
 
