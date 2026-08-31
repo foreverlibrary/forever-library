@@ -38,6 +38,7 @@ A separate Forever Library FA2 contract lives on Tezos at `KT1Tsqqffsf5H5KAWFasA
 
 | Path | Contents |
 | --- | --- |
+| [`WHITEPAPER.md`](WHITEPAPER.md) | Architecture, trust boundaries, known limitations, and suggested review areas |
 | [`INTEGRATION.md`](INTEGRATION.md) | Developer integration guide |
 | [`SECURITY.md`](SECURITY.md) | Vulnerability reporting and audit status |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) · [`CHANGELOG.md`](CHANGELOG.md) | How to contribute; repository history |
